@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Supporto – FamilyBudget</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #0b0b10;
+      --card: #15151c;
+      --accent: #4f8cff;
+      --accent-soft: rgba(79,140,255,0.12);
+      --text: #f4f4f7;
+      --muted: #a0a4b8;
+      --border: #252535;
+      --danger: #ff5c7a;
+      --success: #19c37d;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   system-ui, -system-ui, sans-serif;
+      background: radial-gradient(circle at top, #151523 0, #05050a 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    header img {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    header h1 {
+      font-size: 26px;
+      margin: 0 0 4px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      margin-left: 2px;
+    }
+    .tag span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h2 {
+      margin: 32px 0 12px;
+      font-size: 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #13131b, #090910);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+      margin-bottom: 14px;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    details {
+      background: linear-gradient(145deg, #13131b, #090910);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      margin-bottom: 8px;
+      padding: 10px 14px;
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: "▸";
+      display: inline-block;
+      margin-right: 6px;
+      color: var(--accent);
+      transition: transform .15s ease-out;
+    }
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    details p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    li { margin-bottom: 4px; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .pill {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 201, 127, 0.12);
+      color: var(--success);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    .pill span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+    }
+
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .contact-box div {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: #11111a;
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      header h1 { font-size: 22px; }
+      .page { padding: 24px 16px 40px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <!-- Sostituisci src con un link pubblico alla tua icona -->
+    <img src="https://example.com/familybudget-icon.png" alt="Icona FamilyBudget">
+    <div>
+      <h1>Supporto FamilyBudget</h1>
+      <p>
+        Aiuto per gestire il budget familiare in modo semplice
+        <span class="tag"><span></span>Risposta entro 24–48h</span>
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <p style="color:#a0a4b8;font-size:14px;margin-bottom:18px;">
+      Benvenuto nella pagina di supporto di <strong>FamilyBudget</strong>, l'app pensata per famiglie e coppie
+      che vogliono capire dove vanno i propri soldi ogni mese senza complicazioni.
+      Qui trovi le risposte alle domande più frequenti e il modo migliore per contattarci in caso di problema
+      o suggerimento.
+    </p>
+  </section>
+
+  <section>
+    <h2>FAQ – Domande frequenti</h2>
+
+    <details>
+      <summary>Come aggiungo il mio primo conto?</summary>
+      <p>
+        Apri FamilyBudget e vai nella scheda <em>Conti</em>. Tocca il pulsante <strong>+</strong>,
+        scegli il tipo di conto (es. banca, contanti, risparmio) e inserisci il saldo iniziale.
+        Conferma per iniziare a registrare le tue entrate e uscite su quel conto.
+      </p>
+    </details>
+
+    <details>
+      <summary>Come registro una spesa o un’entrata?</summary>
+      <p>
+        Dalla scheda <em>Dashboard</em> o <em>Conti</em> tocca il pulsante <strong>+</strong>.
+        Seleziona se si tratta di una spesa o di un’entrata, scegli il conto, inserisci importo,
+        categoria e data, poi salva. Il saldo del conto e le statistiche verranno aggiornati
+        automaticamente.
+      </p>
+    </details>
+
+    <details>
+      <summary>Come funziona il budget mensile?</summary>
+      <p>
+        Vai nella scheda <em>Budget</em> e imposta un budget totale mensile e, se vuoi, un budget per
+        singola categoria (es. Casa, Spesa, Ristoranti). Man mano che registri le transazioni,
+        FamilyBudget ti mostra quanto hai già speso, quanto ti resta e se sei ancora nel budget
+        per il periodo scelto.
+      </p>
+    </details>
+
+    <details>
+      <summary>Come gestisco abbonamenti e spese ricorrenti?</summary>
+      <p>
+        Per creare una spesa ricorrente (es. Netflix, affitto, bollette) vai nella sezione
+        <em>Spese ricorrenti</em> e tocca <strong>+</strong>. Imposta importo, categoria,
+        frequenza (mensile, settimanale, annuale…) e data di addebito. FamilyBudget ti ricorda
+        l’importo da pagare e tiene traccia delle occorrenze pagate.
+      </p>
+    </details>
+
+    <details>
+      <summary>Posso usare FamilyBudget in coppia o in famiglia?</summary>
+      <p>
+        FamilyBudget è pensata per essere usata anche in coppia o in famiglia. Puoi condividere
+        l’accesso allo stesso account iCloud sui vari dispositivi di casa, in modo che tutti
+        vedano le stesse informazioni, oppure tenere più budget separati gestiti dalla stessa persona.
+      </p>
+    </details>
+
+    <details>
+      <summary>Come funzionano gli obiettivi di risparmio?</summary>
+      <p>
+        Nella sezione <em>Obiettivi</em> imposta l’importo da raggiungere (es. Vacanza, Fondo emergenze)
+        e, se vuoi, una data obiettivo. Ogni volta che metti da parte una somma, registrala come
+        movimento verso quell’obiettivo. L’app ti mostra la percentuale completata e quanto manca.
+      </p>
+    </details>
+
+    <details>
+      <summary>Cos’è il calendario delle spese?</summary>
+      <p>
+        Il calendario spese ti mostra giorno per giorno quanto hai speso.
+        È utile per individuare a colpo d’occhio i giorni “pesanti” e capire in quali periodi
+        del mese tendi a spendere di più, così da pianificare meglio.
+      </p>
+    </details>
+
+    <details>
+      <summary>I miei dati sono al sicuro? Dove vengono salvati?</summary>
+      <p>
+        I dati che inserisci in FamilyBudget vengono archiviati localmente sul tuo dispositivo
+        e, se attivi la sincronizzazione, possono essere salvati tramite i servizi Apple
+        associati al tuo account (es. iCloud). Non vendiamo né condividiamo i tuoi dati con
+        terze parti per fini pubblicitari.
+      </p>
+    </details>
+
+    <details>
+      <summary>Posso esportare o fare un backup dei dati?</summary>
+      <p>
+        Al momento è disponibile un backup attraverso i meccanismi standard di backup iOS
+        (iCloud / backup tramite iTunes o Finder). Stiamo valutando funzioni di esportazione
+        dedicate (es. file CSV) per future versioni: se per te è importante, faccelo sapere
+        tramite la sezione “Invia un suggerimento”.
+      </p>
+    </details>
+
+    <details>
+      <summary>L’app è gratuita? Ci sono abbonamenti?</summary>
+      <p>
+        La versione attuale di FamilyBudget è gratuita e non richiede abbonamenti obbligatori
+        per gestire il budget familiare. Nel caso in futuro introducessimo funzioni premium,
+        lo comunicheremo in modo chiaro all’interno dell’app prima di qualsiasi addebito.
+      </p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Guide rapide</h2>
+
+    <div class="card">
+      <h3>Primi 5 minuti con FamilyBudget</h3>
+      <p>
+        1) Apri l’app e aggiungi il tuo primo <strong>conto</strong> (es. conto corrente o contanti).<br>
+        2) Inserisci almeno 3 <strong>transazioni</strong> recenti (spese o entrate reali).<br>
+        3) Vai nella scheda <strong>Budget</strong>, imposta il budget mensile totale e controlla
+        quanto ti rimane da spendere nel periodo.<br>
+        Dopo questi tre passi hai già una panoramica chiara del tuo mese.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Impostare un abbonamento ricorrente (es. Netflix)</h3>
+      <p>
+        1) Vai nella sezione <strong>Spese ricorrenti</strong> dalla schermata principale.<br>
+        2) Tocca il pulsante <strong>+</strong> e scegli la categoria più adatta (es. Intrattenimento).<br>
+        3) Imposta importo, frequenza (mensile) e giorno di addebito.<br>
+        4) Salva: vedrai l’abbonamento tra le ricorrenti e vicino alla data FamilyBudget ti mostrerà
+        il promemoria e lo stato del pagamento.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Usare il calendario spese</h3>
+      <p>
+        1) Apri la <strong>Dashboard</strong> e scorri fino alla sezione <strong>Calendario spese</strong>.<br>
+        2) Tocca un giorno per vedere il dettaglio delle transazioni registrate in quella data.<br>
+        3) I giorni con importi più alti sono evidenziati: usali per capire i tuoi “picchi” di spesa
+        e ricalibrare il budget nei mesi successivi.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contatta il supporto</h2>
+
+    <p style="color:#a0a4b8;font-size:14px;">
+      Se qualcosa non funziona come previsto, hai trovato un bug oppure vuoi proporre una nuova funzione,
+      puoi contattarci direttamente. Ti chiediamo solo qualche informazione di base per aiutarci a
+      riprodurre il problema nel modo più preciso possibile.
+    </p>
+
+    <div class="contact-box">
+      <div><strong>Email supporto:</strong> <a href="mailto:support@familybudget.app">support@familybudget.app</a></div>
+      <div><strong>Tempo di risposta:</strong> entro 24–48 ore lavorative</div>
+    </div>
+
+    <ul>
+      <li>Breve descrizione del problema o della richiesta.</li>
+      <li>Modello di iPhone (es. iPhone 14, iPhone SE 3ª gen) e versione di iOS.</li>
+      <li>Versione dell’app FamilyBudget (la trovi nelle impostazioni dell’app o nella scheda Profilo).</li>
+      <li>Se possibile, allega uno screenshot o un video breve della schermata interessata.</li>
+    </ul>
+
+    <div class="pill">
+      <span></span>
+      <div>Ogni feedback ci aiuta a migliorare FamilyBudget per tutte le famiglie.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Suggerimenti e nuove funzionalità</h2>
+
+    <p style="color:#a0a4b8;font-size:14px;">
+      FamilyBudget è un progetto in continua evoluzione. Se hai un’idea o una funzione che vorresti
+      vedere nell’app (es. nuove statistiche, modalità famiglia avanzata, esportazione dati),
+      scrivici all’indirizzo di supporto indicando nell’oggetto <strong>[Suggerimento]</strong>.
+      Valutiamo tutte le proposte e le utilizziamo per pianificare gli aggiornamenti futuri.
+    </p>
+  </section>
+
+  <section>
+    <h2>Note per la revisione Apple (facoltativo)</h2>
+    <p style="color:#a0a4b8;font-size:13px;">
+      Se sei un revisore Apple e stai testando FamilyBudget, la sequenza più rapida per vedere le
+      principali funzioni è: creare un conto, aggiungere 3 transazioni, impostare il budget mensile,
+      creare una ricorrente e verificare il calendario spese. Per qualsiasi dubbio puoi contattarci
+      all’indirizzo support@familybudget.app.
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
